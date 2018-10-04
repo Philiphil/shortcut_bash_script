@@ -1,0 +1,6 @@
+#!/bin/bash 
+if [ "$1" == "" ]; then
+    echo "first param must be container name or id"
+    exit
+fi
+docker exec -i -t $1 bash
