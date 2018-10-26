@@ -1,0 +1,7 @@
+#!/bin/bash 
+if [ "$1" == "" ]; then
+    where="."
+else
+    where="$1"
+fi
+sudo chown -Rf $USER:$USER $where

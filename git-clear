@@ -8,4 +8,4 @@ git checkout $CLEAN
 git checkout -- .
 git pull --rebase origin $CLEAN
 git reset --hard origin/$CLEAN
-chown -Rf $USER:$USER .
+chmine
