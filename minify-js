@@ -1,9 +1,9 @@
 #!/bin/bash
-for f in $(find .  -name \*.css);
+for f in $(find .  -name \*.js);
 do
-    NEWPATH=${f::-4}
+    NEWPATH=${f::-3}
     if [ "${NEWPATH: -4}" != ".min" ];then
-        NEWPATH=$NEWPATH.min.css
+        NEWPATH=$NEWPATH.min.js
         yui-compressor $f > $NEWPATH
     fi
 done
