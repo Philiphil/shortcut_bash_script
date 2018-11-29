@@ -7,3 +7,4 @@ alias git-unadd="git reset HEAD"
 alias git-ls="git branch -a && git status"
 alias docker-clean-unused='docker system prune --all --force --volumes'
 alias docker-clean-all='docker stop $(docker container ls -a -q) && docker system prune -a -f --volumes'
+alias reloadalias="source ~/.bashrc"
