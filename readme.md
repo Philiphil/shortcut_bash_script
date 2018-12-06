@@ -9,10 +9,13 @@ docker-clean-all : remove all
 git shortcut (require git)
 git-clear [branch??master] : reset branch to previous commit
 git-delete-branch [branch] : delete branch local && remote
-git-new-branch [branchname] : create new branch,commit & push
+git-remove-branch (alias)
+git-new-branch [branch] : create new branch,commit & push
+git-add-branch (alias)
 git-uncommit : uncommit local commit
 git-unadd : unadd file
 git-ls : git branch -a && git status
+git-search-branch [branch] : git branch -a | grep [branch]
 
 minify (require yui compressor)
 minify-css

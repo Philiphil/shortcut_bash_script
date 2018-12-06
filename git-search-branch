@@ -1,0 +1,6 @@
+#!/bin/bash 
+if [ "$1" == "" ]; then
+    echo "first param must be branch name"
+    exit
+fi
+git branch -a | grep $1
