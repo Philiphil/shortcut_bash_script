@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ "$1" == "" ]; then
-    CLEAN="master"
+    CLEAN=$(git branch --show-current)
 else
     CLEAN=$1
 fi
