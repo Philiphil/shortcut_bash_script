@@ -12,7 +12,7 @@ alias git-refresh-commit="git-add-commit"
 alias git-log="git log --pretty --decorate --date=short"
 
 alias docker-clean-unused='docker system prune --all --force --volumes'
-alias docker-clean-all='docker-stop-all && docker system prune -a -f --volumes'
+alias docker-clean-all='docker-stop-all &&  docker-clean-unused'
 alias docker-get-all='docker container ls -a -q'
 alias docker-stop-all='docker stop $(docker-get-all)'
 alias docker-down-all='docker-stop-all'
