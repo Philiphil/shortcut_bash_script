@@ -1,0 +1,12 @@
+#!/bin/bash 
+if [ "$1" == "" ]; then
+    echo "first param must be lambda name"
+    exit
+fi
+if [ "$2" == "" ]; then
+    echo "second param must be function name"
+    exit
+fi
+
+aws lambda invoke --function-name $1 --cli-binary-format raw-in-base64-out \
+  --payload '"d:m:m"' --log-type Tail --output text --query 'LogResult' - | base64 -d
