@@ -1,6 +1,7 @@
 alias ls="ls -lhau --color=auto"
 alias mkdir='mkdir -pv'
 alias rm='rm --preserve-root'
+alias grep="grep --color=auto"
 
 alias git-uncommit="git reset --soft HEAD^"
 alias git-unadd="git reset HEAD"
