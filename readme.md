@@ -1,5 +1,6 @@
 # unix shortcut for devtools and such  
-
+## aws
+aws-lambda [lambda name] [function to execute]
 ## docker shortcut & macro (require docker, docker-compose)  
 docker-bash [dockername] : docker exec -it bash [dockername]  
 docker-renew : docker-compose down && docker-compose up  
