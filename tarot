@@ -57,9 +57,24 @@ function numerology($numero){
 	if($numero <=22) return $numero;
 	return numerology(array_sum(str_split($numero)));
 }
-;
+
+
+function piped(){
+    if(function_exists("posix_isatty")){
+        return !posix_isatty(STDIN);
+    }else if (function_exists("stream_isatty")){
+        return !stream_isatty(STDIN);
+    }
+    return false;
+}
 
 function main($argc, $argv){
+	if (piped()) {
+        $st = stream_get_contents(fopen("php://stdin", "r"));
+        echo card(numerology($st));
+        return;
+	}
+
 	if($argc==1){
 		echo draw(getMajeures());
 		return;

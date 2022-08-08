@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+function main($argc, $argv){
+	$toAlpha = function ($num){
+		$alphabet = range('A', 'Z');
+		return array_search($num, $alphabet)+1; // returns 3
+	};
+    
+    
+    $total=0;
+    for ($i = 1; $i < $argc; $i++) {
+     
+	    $total += processWord($argv[$i], $toAlpha);
+    }
+    echo $total;
+
+}
+
+function processWord($word,$algo)
+{
+    $total=0;
+    foreach (str_split($word) as $letter) {
+        $total += $algo(strtoupper($letter));
+    }
+    return $total;
+}
+
+main($argc, $argv);
