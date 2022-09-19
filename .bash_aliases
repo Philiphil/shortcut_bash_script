@@ -19,6 +19,7 @@ alias docker-stop-all='docker stop $(docker-get-all)'
 alias docker-down-all='docker-stop-all'
 alias docker-down='docker-compose down -v --remove-orphans'
 alias docker-up='docker-compose up'
+alias dcud='docker-up -d'
 alias docker-restart='docker-down && docker-up'
 
 alias reloadalias="source ~/.bashrc"
