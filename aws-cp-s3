@@ -1,0 +1,11 @@
+#!/bin/bash 
+if [ "$1" == "" ]; then
+    echo "first param must be s3 folder"
+    exit
+fi
+if [ "$2" == "" ]; then
+    echo "second param must local folder"
+    exit
+fi
+
+aws s3 cp --recursive s3://$1 $2
